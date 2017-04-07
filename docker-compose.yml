@@ -22,8 +22,8 @@ services:
     ports:
       - "8880:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=marcin
-      - MYSQL_DATABASE=tikaAp
+      - MYSQL_ROOT_PASSWORD=  # update with your credentials
+      - MYSQL_DATABASE=       # update with your credentials
     volumes:
       - data_tikadb:/databases
       - "./docker/config-file.cnf:/etc/mysql/conf.d/config-file.cnf"
@@ -34,8 +34,8 @@ services:
     ports:
       - "9000:80"
     environment:
-      - "PMA_USER=root"
-      - "PMA_PASSWORD=marcin"
+      - "PMA_USER=  "         # update with your credentials
+      - "PMA_PASSWORD=  "     # update with your credentials
       
   tika_java:
     container_name: tikaAp-server
